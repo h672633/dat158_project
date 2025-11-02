@@ -2,8 +2,8 @@ import gradio as gr
 from joblib import load
 import pandas as pd
 
-model = load("models/car_value_model.joblib")
-encoders = load("encoders/encoders.joblib")
+model = load("./models/car_value_model.joblib")
+encoders = load("./encoders/encoders.joblib")
 
 category = ["brand", "fuel_type", "transmission", "ext_col", "int_col", "accident", "clean_title"]
 
@@ -56,4 +56,5 @@ interface = gr.Interface(
 )
 
 if __name__ == "__main__":
-    interface.launch(share = True)
+    interface.launch()
+    
